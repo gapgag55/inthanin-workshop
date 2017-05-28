@@ -1,0 +1,20 @@
+<% for(var i = 0; i < data.posts.data.length; i++) { %>
+    <article class="media">
+        <figure class="media-left">
+            <p class="image is-64x64">
+            <img src=<%= "http://graph.facebook.com/" + data.id + "/picture?type=large" %>>
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="content">
+            <p>
+                <strong><%= data.name %></strong> <small>@johnsmith</small> 
+                <small> <%= data.posts.data[i].created_time %></small>
+                <br>
+                <%= data.posts.data[i].message %>
+            </p>
+            </div>
+        </div>
+    </article>
+<% } %>
+<% include newpost.ejs %>
